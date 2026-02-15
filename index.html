@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahadev Parvati Particle Formation</title>
+<style>
+    body {
+        margin: 0;
+        background: radial-gradient(ellipse at center, #0a0a1a 0%, #000000 100%);
+        overflow: hidden;
+        font-family: 'Noto Sans Devanagari', sans-serif;
+        position: relative;
+    }
+    
+    /* Universe stars background */
+    body::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(2px 2px at 20px 30px, white, transparent),
+            radial-gradient(2px 2px at 60px 70px, white, transparent),
+            radial-gradient(1px 1px at 50px 50px, white, transparent),
+            radial-gradient(1px 1px at 130px 80px, white, transparent),
+            radial-gradient(2px 2px at 90px 10px, white, transparent);
+        background-size: 200px 200px;
+        opacity: 0.3;
+        animation: twinkle 100s linear infinite;
+    }
+    
+    @keyframes twinkle {
+        0% { opacity: 0.3; }
+        50% { opacity: 0.5; }
+        100% { opacity: 0.3; }
+    }
+    
+    canvas {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .om {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 80px;
+        color: #ffd700;
+        text-shadow: 0 0 40px #ffd700, 0 0 80px #ff8c00;
+        z-index: 10;
+        animation: pulse 3s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+        50% { opacity: 0.8; transform: translateX(-50%) scale(1.05); }
+    }
+    
+    .mantra {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 10;
+        opacity: 0;
+        animation: fadeIn 2s 4s forwards;
+    }
+    
+    .mantra h1 {
+        font-size: 48px;
+        color: #ffd700;
+        text-shadow: 0 0 30px #ffd700, 0 0 60px #ff8c00;
+        margin: 0 0 10px 0;
+        font-weight: 900;
+    }
+    
+    .mantra p {
+        font-size: 28px;
+        color: #fff;
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        margin: 0;
+        font-weight: 400;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+        to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+</style>
+</head>
+<body>
+
+<div class="om">ॐ</div>
+<canvas id="canvas"></canvas>
+<div class="mantra">
+    <h1>नमः शिवाय</h1>
+    <p>पार्वती वंदना</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
