@@ -32,8 +32,13 @@ git clone https://github.com/rishu160/mahadev.git
 
 2. Open `index.html` in your browser
 
+## 👨‍💻 Author
+
+**Rishu**
+- GitHub: [@rishu160](https://github.com/rishu160)
+
 ## 🙏 Credits
 
-Created with devotion for Lord Shiva and Goddess Parvati
+Created with devotion by **Rishu** for Lord Shiva and Goddess Parvati
 
 **Har Har Mahadev! 🔱**
